@@ -1,4 +1,4 @@
 # piece-of-code-
 kachalochka project
 
-download file's and put then in your VScode and run main file 
+download file's and put them in your VScode and run main file 
