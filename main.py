@@ -22,7 +22,7 @@ from runner import Runner, Ruiner
 
 
 
-Window.clearcolor = (0, 204, 51, 1) 
+Window.clearcolor = (30, 0, 0, 1) 
 btn_color = (0.30, 0.31, 0.8, 1)
 
 age = 7
@@ -87,6 +87,9 @@ class PulseScr(Screen):
        instr = Label(text=txt_test1)
        self.lbl_sec = Seconds(15)
        self.lbl_sec.bind(done=self.sec_finished)
+       self.img = Image(source='gachi.jpg',
+                    size_hint=(4, .9),
+                    pos_hint={'center_x':.5, 'center_y':.8})
 
        line = BoxLayout(size_hint=(0.8, None), height='30sp')
        lbl_result = Label(text='Введите результат:', halign='right')
@@ -108,6 +111,7 @@ class PulseScr(Screen):
        self.line3 = BoxLayout(size_hint=(0.8, None), height='80sp', pos_hint={'center_x': 0.5})
        self.line3.add_widget(self.btn)
        outer.add_widget(self.line3)
+       outer.add_widget(self.img)
     
        self.add_widget(outer)
 
@@ -180,8 +184,11 @@ class Pulse4(Screen):
        self.next_screen = False
       
        instr = Label(text=txt_test4)
-       self.lbl_sec = Seconds(1)
+       self.lbl_sec = Seconds(10)
        self.lbl_sec.bind(done=self.sec_finished)
+       self.img = Image(source='gachi.jpg',
+                    size_hint=(4, .9),
+                    pos_hint={'center_x':.5, 'center_y':.9})
 
        line = BoxLayout(size_hint=(0.8, None), height='30sp')
        lbl_result = Label(text='Введите результат:', halign='right')
@@ -200,6 +207,7 @@ class Pulse4(Screen):
        #outer.add_widget(lbl1)
        outer.add_widget(self.lbl_sec)
        outer.add_widget(line)
+       outer.add_widget(self.img)
        self.line3 = BoxLayout(size_hint=(0.8, None), height='80sp', pos_hint={'center_x': 0.5})
        self.line3.add_widget(self.btn)
        outer.add_widget(self.line3)
